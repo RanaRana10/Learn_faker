@@ -11,15 +11,15 @@ https://t.me/RanaUniverse 🍌🍌🍌
 '''
 
 
-from faker import Fake
-fake = Fake()
+from faker import Faker
+fake = Faker()
 
 
 
-
-
-
-
+if __name__ == "__main__":
+    
+    variable = fake.name()
+    print(variable)
 
 
 
