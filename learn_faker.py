@@ -12,29 +12,30 @@ https://t.me/RanaUniverse 🍌🍌🍌
 
 
 from faker import Faker
+from faker.providers import DynamicProvider
+
+
+medical_professions_provider = DynamicProvider(
+     provider_name="medical_profession",
+     elements=["dr.", "doctor", "nurse", "surgeon", "clerk"],
+)
 fake = Faker()
 
-
-def main():
-    for i in range(1,2):
-        # variable = fake.name()
-        # print(variable)
-        # variable = fake.address()
-        # print(variable, "\n")
-
-        # variable = fake.text(5)
-        # print(variable)
-
-        # fake = Faker('it_IT')
-        # for _ in range(10):
-        
-        print(fake.name())
+fake.add_provider(medical_professions_provider)
+print(fake.medical_profession())
 
 
 
 
-if __name__ == "__main__":
-    main()
+
+
+# def main():
+#     for i in range(1,2):
+#         print(fake.name())
+
+
+# if __name__ == "__main__":
+#     main()
     
 
 
