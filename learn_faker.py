@@ -15,11 +15,28 @@ from faker import Faker
 fake = Faker()
 
 
+def main():
+    for i in range(1,2):
+        # variable = fake.name()
+        # print(variable)
+        # variable = fake.address()
+        # print(variable, "\n")
+
+        # variable = fake.text(5)
+        # print(variable)
+
+        # fake = Faker('it_IT')
+        # for _ in range(10):
+        
+        print(fake.name())
+
+
+
 
 if __name__ == "__main__":
+    main()
     
-    variable = fake.name()
-    print(variable)
+
 
 
 
