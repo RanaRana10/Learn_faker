@@ -14,18 +14,16 @@ https://t.me/RanaUniverse 🍌🍌🍌
 from faker import Faker
 from faker.providers import DynamicProvider
 
-
-medical_professions_provider = DynamicProvider(
-     provider_name="medical_profession",
-     elements=["dr.", "doctor", "nurse", "surgeon", "clerk"],
-)
 fake = Faker()
 
-fake.add_provider(medical_professions_provider)
-print(fake.medical_profession())
+my_word_list = [
+'pie','bar','Ice','oat' ]
 
+print(fake.sentence())
+# 'Expedita at beatae voluptatibus nulla omnis.'
 
-
+print(fake.sentence(ext_word_list=my_word_list))
+# 'Oat beans oat Lollipop bar cheesecake.'
 
 
 
